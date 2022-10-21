@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  font-family: "Space Grotesk", sans-serif;
+  min-height: 100vmax;
+  font-size: 18px;
+  background: url("../images/bg-main-desktop.png");
+  justify-content: center;
+  position: relative;
+}
+main .card_container {
+  color: white;
+  padding: 10%;
+}
+main .card_container .card_front {
+  width: 285px;
+  height: 156px;
+  background-image: url("../images/bg-card-front.png");
+}
+main form {
+  position: absolute;
+  bottom: 0;
+  background: white;
+}
+
+@media only screen and (min-width: 1440px) {
+  main {
+    background-color: red;
+  }
+}/*# sourceMappingURL=style.css.map */

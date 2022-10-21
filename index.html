@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- langkah pembuatan 
+   1- Buat form 
+   2- atur responsive device
+   3- letakkan card
+   4- warnai halaman
+    
+  -->
+
+    <main>
+      <div class="card_container">
+        <div class="card_front">
+          <p class="number_set">0000 0000 0000 0000</p>
+          <p class="month_set">Jane Appleseed</p>
+          <p class="year_set">00/00</p>
+        </div>
+        <div class="card_back"></div>
+        <figure></figure>
+        000
+      </div>
+      <form>
+        <label for="username">Cardholder Name</label><br />
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="e.g. Jane Appleseed"
+        /><br />
+        <label for="lname">Card Number</label><br />
+        <input
+          type="number"
+          id="number"
+          name="number"
+          placeholder="e.g. 1234 5678 9123 0000"
+        /><br />
+        <p>Exp. Date (MM/YY):</p>
+        <input type="number" id="month" name="month" placeholder="MM" /><br />
+        <input type="number" id="year" name="year" placeholder="YY" /><br />
+        <p>CVC</p>
+        <input type="number" id="day" name="day" placeholder="e.g. 123 " />
+        <button>Confirm</button>
+      </form>
+    </main>
+
+    <!-- Completed state start -->
+
+    <!-- Thank you!
+  We've added your card details
+  Continue
+   -->
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
