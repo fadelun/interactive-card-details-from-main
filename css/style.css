@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,23 +26,66 @@ main .card_container .card_front {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: absolute;
+  top: 17%;
+  left: 20px;
+  z-index: 99;
 }
 main .card_container .card_front .logo {
-  flex-grow: 1;
+  height: 40%;
+  padding: 14px 20px;
 }
 main .card_container .card_front .card_value {
-  flex-grow: 2;
+  height: 60%;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-between;
+}
+main .card_container .card_front .card_value .number_set {
+  width: 100%;
+  letter-spacing: 2px;
+}
+main .card_container .card_front .card_value .month_set {
+  font-size: 0.6rem;
+  margin-left: 10%;
+}
+main .card_container .card_front .card_value .year_set {
+  font-size: 0.6rem;
+  margin-right: 10%;
 }
 main .card_container .card_front .card_value .date {
   display: flex;
+  height: 100%;
   justify-content: space-between;
-  justify-items: center;
+  align-content: flex-end;
+}
+main .card_container .card_back {
+  background-image: url("../images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 285px;
+  height: 156px;
+  position: absolute;
+  right: 20px;
+  font-size: 0.6rem;
+}
+main .card_container .card_back p {
+  position: absolute;
+  right: 30px;
+  top: 45%;
+  letter-spacing: 1px;
 }
 main form {
   position: absolute;
   bottom: 0;
   background: white;
+  top: 30%;
+  right: 0;
+  left: 0;
+  padding: 40% 0 0 0;
 }
 
 @media only screen and (min-width: 1440px) {
