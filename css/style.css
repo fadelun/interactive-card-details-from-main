@@ -18,9 +18,15 @@ main .card_container {
   padding: 10%;
 }
 main .card_container .card_front {
-  width: 285px;
-  height: 156px;
-  background-image: url("../images/bg-card-front.png");
+  background-color: gray;
+  position: relative;
+}
+main .card_container .card_front .card_value {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 main form {
   position: absolute;

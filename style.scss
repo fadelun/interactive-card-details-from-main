@@ -26,16 +26,24 @@ main {
     padding: 10%;
 
     .card_front {
-      // dekstop size
-      // max-width: 447px;
-      // max-height: 245px;
-      width: 285px;
-      height: 156px;
-      background-image: url("../images/bg-card-front.png");
-    }
-    // .card_black{
+      background-color: gray;
+      position: relative;
 
-    // }
+      .card_value {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      img {
+        // dekstop size
+        // max-width: 447px;
+        // max-height: 245px;
+        // width: 285px;
+        // height: 156px;
+      }
+    }
   }
 
   form {
