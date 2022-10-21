@@ -32,6 +32,30 @@ main {
       width: 285px;
       height: 156px;
       background-image: url("../images/bg-card-front.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .logo {
+        // The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items.
+        flex-grow: 1;
+      }
+
+      .card_value {
+        flex-grow: 2;
+        text-align: center;
+        // .number_set{
+        //   te
+        // }
+
+        .date {
+          display: flex;
+          justify-content: space-between;
+          justify-items: center;
+        }
+      }
     }
     // .card_black{
 

@@ -21,6 +21,23 @@ main .card_container .card_front {
   width: 285px;
   height: 156px;
   background-image: url("../images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .card_container .card_front .logo {
+  flex-grow: 1;
+}
+main .card_container .card_front .card_value {
+  flex-grow: 2;
+  text-align: center;
+}
+main .card_container .card_front .card_value .date {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
 }
 main form {
   position: absolute;
