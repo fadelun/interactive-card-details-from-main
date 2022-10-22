@@ -5,6 +5,20 @@ $input-error: hsl(0, 100%, 66%);
 $violet-light: hsl(270, 3%, 87%);
 $violet-dark: hsl(279, 6%, 55%);
 $violet-dark-02: hsl(278, 68%, 11%);
+$font-primary: "Space Grotesk", sans-serif;
+
+@mixin label-text {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  letter-spacing: 1.3px;
+  margin-bottom: 4px;
+}
+
+@mixin text-primary {
+  font-family: $font-primary;
+  font-weight: 500;
+}
 
 * {
   box-sizing: border-box;
@@ -12,100 +26,166 @@ $violet-dark-02: hsl(278, 68%, 11%);
   padding: 0;
 }
 
-main {
-  font-family: "Space Grotesk", sans-serif;
-  min-height: 100vmax;
+html {
   font-size: 18px;
-  background: url("../images/bg-main-desktop.png");
+  font-family: $font-primary;
+  body {
+    height: 100vh;
 
-  justify-content: center;
-  position: relative;
-
-  .card_container {
-    color: white;
-    padding: 10%;
-
-    .card_front {
-      // dekstop size
-      // max-width: 447px;
-      // max-height: 245px;
-      width: 285px;
-      height: 156px;
-      background-image: url("../images/bg-card-front.png");
-      background-repeat: no-repeat;
+    header {
+      background: url("../images/bg-main-mobile.png");
       background-size: cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: absolute;
-      top: 17%;
-      left: 20px;
-      z-index: 99;
+      color: white;
+      height: 240px;
 
-      .logo {
-        // The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items.
-        // flex-grow: 1;
-        height: 40%;
-        padding: 14px 20px;
-      }
-
-      .card_value {
-        height: 60%;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-content: space-around;
-        justify-content: space-between;
-
-        .number_set {
-          width: 100%;
-          letter-spacing: 2px;
-        }
-
-        .month_set {
-          font-size: 0.6rem;
-          margin-left: 10%;
-        }
-        .year_set {
-          font-size: 0.6rem;
-          margin-right: 10%;
-        }
-
-        .date {
+      .card_container {
+        position: relative;
+        height: 100%;
+        .card_front {
+          // dekstop size
+          // max-width: 447px;
+          // max-height: 245px;
+          width: 285px;
+          height: 156px;
+          background-image: url("../images/bg-card-front.png");
+          background-repeat: no-repeat;
+          background-size: cover;
           display: flex;
-          height: 100%;
+          flex-direction: column;
           justify-content: space-between;
-          align-content: flex-end;
+          position: absolute;
+          bottom: -40px;
+          left: 6%;
+          z-index: 99;
+
+          .logo {
+            // The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items.
+            // flex-grow: 1;
+            height: 40%;
+            padding: 14px 20px;
+          }
+
+          .card_value {
+            height: 60%;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-content: space-around;
+            justify-content: space-between;
+
+            .number_set {
+              width: 100%;
+              letter-spacing: 2px;
+            }
+
+            .month_set {
+              font-size: 0.6rem;
+              margin-left: 10%;
+            }
+            .year_set {
+              font-size: 0.6rem;
+              margin-right: 10%;
+            }
+
+            .date {
+              display: flex;
+              height: 100%;
+              justify-content: space-between;
+              align-content: flex-end;
+            }
+          }
+        }
+        .card_back {
+          background-image: url("../images/bg-card-back.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 285px;
+          height: 156px;
+          position: absolute;
+          right: 6%;
+          top: 20px;
+          font-size: 0.6rem;
+          p {
+            position: absolute;
+            right: 30px;
+            top: 45%;
+            letter-spacing: 1px;
+          }
         }
       }
     }
-    .card_back {
-      background-image: url("../images/bg-card-back.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 285px;
-      height: 156px;
-      position: absolute;
-      right: 20px;
-      font-size: 0.6rem;
+
+    main.container {
+      background: white;
+      padding: 80px 6% 0;
+      display: flex;
+      flex-wrap: wrap;
+
+      form.grid_items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 25%) 30% 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        height: 300px;
+
+        .item1 {
+          grid-area: 1 / 1 / 2 / 5;
+        }
+        .item2 {
+          grid-area: 2 / 1 / 3 / 5;
+        }
+        .item3 {
+          grid-area: 3 / 1 / 4 / 3;
+          width: 96%;
+
+          .flex {
+            display: flex;
+            justify-content: space-between;
+
+            input {
+              width: 46%;
+            }
+          }
+        }
+        .item4 {
+          grid-area: 3 / 3 / 4 / 5;
+        }
+        button {
+          background: hsl(278, 68%, 11%);
+          border: 1px solid transparent;
+          color: white;
+          border-radius: 8px;
+
+          &.item5 {
+            grid-area: 4 / 1 / 5 / 5;
+            font-size: 1rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 500;
+          }
+        }
+      }
+
+      label,
       p {
-        position: absolute;
-        right: 30px;
-        top: 45%;
-        letter-spacing: 1px;
+        @include label-text();
+
+        color: hsl(278deg 100% 11%);
+        font-size: 0.8rem;
+      }
+
+      input {
+        @include text-primary();
+
+        padding: 10px 16px;
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid $violet-light;
+        margin-bottom: 8px;
+        font-size: 18px;
       }
     }
-  }
-
-  form {
-    position: absolute;
-    bottom: 0;
-    background: white;
-    top: 30%;
-    right: 0;
-    left: 0;
-    padding: 40% 0 0 0;
   }
 }
 

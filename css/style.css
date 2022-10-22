@@ -5,19 +5,24 @@
   padding: 0;
 }
 
-main {
-  font-family: "Space Grotesk", sans-serif;
-  min-height: 100vmax;
+html {
   font-size: 18px;
-  background: url("../images/bg-main-desktop.png");
-  justify-content: center;
-  position: relative;
+  font-family: "Space Grotesk", sans-serif;
 }
-main .card_container {
+html body {
+  height: 100vh;
+}
+html body header {
+  background: url("../images/bg-main-mobile.png");
+  background-size: cover;
   color: white;
-  padding: 10%;
+  height: 240px;
 }
-main .card_container .card_front {
+html body header .card_container {
+  position: relative;
+  height: 100%;
+}
+html body header .card_container .card_front {
   width: 285px;
   height: 156px;
   background-image: url("../images/bg-card-front.png");
@@ -27,15 +32,15 @@ main .card_container .card_front {
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
-  top: 17%;
-  left: 20px;
+  bottom: -40px;
+  left: 6%;
   z-index: 99;
 }
-main .card_container .card_front .logo {
+html body header .card_container .card_front .logo {
   height: 40%;
   padding: 14px 20px;
 }
-main .card_container .card_front .card_value {
+html body header .card_container .card_front .card_value {
   height: 60%;
   text-align: center;
   display: flex;
@@ -44,48 +49,106 @@ main .card_container .card_front .card_value {
   align-content: space-around;
   justify-content: space-between;
 }
-main .card_container .card_front .card_value .number_set {
+html body header .card_container .card_front .card_value .number_set {
   width: 100%;
   letter-spacing: 2px;
 }
-main .card_container .card_front .card_value .month_set {
+html body header .card_container .card_front .card_value .month_set {
   font-size: 0.6rem;
   margin-left: 10%;
 }
-main .card_container .card_front .card_value .year_set {
+html body header .card_container .card_front .card_value .year_set {
   font-size: 0.6rem;
   margin-right: 10%;
 }
-main .card_container .card_front .card_value .date {
+html body header .card_container .card_front .card_value .date {
   display: flex;
   height: 100%;
   justify-content: space-between;
   align-content: flex-end;
 }
-main .card_container .card_back {
+html body header .card_container .card_back {
   background-image: url("../images/bg-card-back.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 285px;
   height: 156px;
   position: absolute;
-  right: 20px;
+  right: 6%;
+  top: 20px;
   font-size: 0.6rem;
 }
-main .card_container .card_back p {
+html body header .card_container .card_back p {
   position: absolute;
   right: 30px;
   top: 45%;
   letter-spacing: 1px;
 }
-main form {
-  position: absolute;
-  bottom: 0;
+html body main.container {
   background: white;
-  top: 30%;
-  right: 0;
-  left: 0;
-  padding: 40% 0 0 0;
+  padding: 80px 6% 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+html body main.container form.grid_items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 25%) 30% 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 300px;
+}
+html body main.container form.grid_items .item1 {
+  grid-area: 1/1/2/5;
+}
+html body main.container form.grid_items .item2 {
+  grid-area: 2/1/3/5;
+}
+html body main.container form.grid_items .item3 {
+  grid-area: 3/1/4/3;
+  width: 96%;
+}
+html body main.container form.grid_items .item3 .flex {
+  display: flex;
+  justify-content: space-between;
+}
+html body main.container form.grid_items .item3 .flex input {
+  width: 46%;
+}
+html body main.container form.grid_items .item4 {
+  grid-area: 3/3/4/5;
+}
+html body main.container form.grid_items button {
+  background: hsl(278deg, 68%, 11%);
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 8px;
+}
+html body main.container form.grid_items button.item5 {
+  grid-area: 4/1/5/5;
+  font-size: 1rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+}
+html body main.container label,
+html body main.container p {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  letter-spacing: 1.3px;
+  margin-bottom: 4px;
+  color: hsl(278deg, 100%, 11%);
+  font-size: 0.8rem;
+}
+html body main.container input {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 500;
+  padding: 10px 16px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid hsl(270deg, 3%, 87%);
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
 @media only screen and (min-width: 1440px) {
