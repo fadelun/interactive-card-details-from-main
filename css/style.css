@@ -85,6 +85,7 @@ html body header .card_container .card_back p {
   letter-spacing: 1px;
 }
 html body main.container {
+  width: 100%;
   background: white;
   padding: 80px 6% 0;
   display: flex;
@@ -161,12 +162,27 @@ html body main.container input {
     height: 100vh;
   }
   html body header .card_container .card_front {
+    width: 447px;
+    height: 245px;
     top: 25%;
     left: 40%;
   }
   html body header .card_container .card_back {
+    width: 447px;
+    height: 245px;
     top: auto;
     bottom: 25%;
     left: 60%;
+    z-index: 20;
+  }
+  html body main.container {
+    position: relative;
+    width: 60%;
+  }
+  html body main.container form.grid_items {
+    position: absolute;
+    right: 20%;
+    bottom: 150px;
+    left: 260px;
   }
 }/*# sourceMappingURL=style.css.map */
