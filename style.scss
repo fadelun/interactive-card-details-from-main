@@ -187,10 +187,29 @@ html {
       }
     }
   }
-}
 
-@media only screen and (min-width: 1440px) {
-  main {
-    background-color: red;
+  @media only screen and (min-width: 1024px) {
+    body {
+      display: flex;
+
+      header {
+        width: 40%;
+        background: url(../images/bg-main-desktop.png);
+        background-size: cover;
+        height: 100vh;
+
+        .card_container {
+          .card_front {
+            top: 25%;
+            left: 40%;
+          }
+          .card_back {
+            top: auto;
+            bottom: 25%;
+            left: 60%;
+          }
+        }
+      }
+    }
   }
 }
