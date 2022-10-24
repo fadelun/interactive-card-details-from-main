@@ -123,68 +123,83 @@ html {
       display: flex;
       flex-wrap: wrap;
 
-      form.grid_items {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 25%) 30% 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        height: 300px;
+      form {
+        &.grid_items {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(2, 25%) 30% 1fr;
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+          height: 300px;
 
-        .item1 {
-          grid-area: 1 / 1 / 2 / 5;
-        }
-        .item2 {
-          grid-area: 2 / 1 / 3 / 5;
-        }
-        .item3 {
-          grid-area: 3 / 1 / 4 / 3;
-          width: 96%;
+          .item1 {
+            grid-area: 1 / 1 / 2 / 5;
+          }
+          .item2 {
+            grid-area: 2 / 1 / 3 / 5;
+          }
+          .item3 {
+            grid-area: 3 / 1 / 4 / 3;
+            width: 96%;
 
-          .flex {
-            display: flex;
-            justify-content: space-between;
+            .flex {
+              display: flex;
+              justify-content: space-between;
 
-            input {
-              width: 46%;
+              input {
+                width: 46%;
+              }
+            }
+          }
+          .item4 {
+            grid-area: 3 / 3 / 4 / 5;
+          }
+          button {
+            background: hsl(278, 68%, 11%);
+            border: 1px solid transparent;
+            color: white;
+            border-radius: 8px;
+
+            &.item5 {
+              grid-area: 4 / 1 / 5 / 5;
+              font-size: 1rem;
+              font-family: "Space Grotesk", sans-serif;
+              font-weight: 500;
             }
           }
         }
-        .item4 {
-          grid-area: 3 / 3 / 4 / 5;
-        }
-        button {
-          background: hsl(278, 68%, 11%);
-          border: 1px solid transparent;
-          color: white;
-          border-radius: 8px;
+        label,
+        p {
+          @include label-text();
 
-          &.item5 {
-            grid-area: 4 / 1 / 5 / 5;
-            font-size: 1rem;
-            font-family: "Space Grotesk", sans-serif;
-            font-weight: 500;
+          color: hsl(278deg 100% 11%);
+          font-size: 0.8rem;
+        }
+
+        input {
+          @include text-primary();
+
+          padding: 10px 16px;
+          width: 100%;
+          border-radius: 6px;
+          border: 1px solid $violet-light;
+          margin-bottom: 8px;
+          font-size: 18px;
+          &::placeholder {
+            color: $violet-light;
+          }
+
+          &:focus {
+            // cara bikin gradiasi warna border
+            border: 1px solid transparent;
+            border-image: linear-gradient(
+              0deg,
+              hsl(249, 99%, 64%),
+              hsl(278, 94%, 30%)
+            ) !important;
+            border-image-slice: 1;
           }
         }
-      }
-
-      label,
-      p {
-        @include label-text();
-
-        color: hsl(278deg 100% 11%);
-        font-size: 0.8rem;
-      }
-
-      input {
-        @include text-primary();
-
-        padding: 10px 16px;
-        width: 100%;
-        border-radius: 6px;
-        border: 1px solid $violet-light;
-        margin-bottom: 8px;
-        font-size: 18px;
       }
     }
   }
@@ -207,12 +222,17 @@ html {
             height: 245px;
             top: 25%;
             left: 40%;
+            .number_set,
+            .month_set,
+            .year_set {
+              font-size: 1rem !important;
+            }
           }
           .card_back {
             width: 447px;
             height: 245px;
             top: auto;
-            bottom: 25%;
+            bottom: 20%;
             left: 60%;
             z-index: 20;
           }
@@ -225,8 +245,14 @@ html {
         form.grid_items {
           position: absolute;
           right: 20%;
-          bottom: 150px;
-          left: 260px;
+          bottom: 34%;
+          left: 40%;
+
+          height: 340px;
+
+          button {
+            margin: 10px;
+          }
         }
       }
     }

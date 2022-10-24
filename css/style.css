@@ -131,8 +131,8 @@ html body main.container form.grid_items button.item5 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
 }
-html body main.container label,
-html body main.container p {
+html body main.container form label,
+html body main.container form p {
   font-weight: bold;
   text-transform: uppercase;
   display: block;
@@ -141,7 +141,7 @@ html body main.container p {
   color: hsl(278deg, 100%, 11%);
   font-size: 0.8rem;
 }
-html body main.container input {
+html body main.container form input {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
   padding: 10px 16px;
@@ -150,6 +150,14 @@ html body main.container input {
   border: 1px solid hsl(270deg, 3%, 87%);
   margin-bottom: 8px;
   font-size: 18px;
+}
+html body main.container form input::placeholder {
+  color: hsl(270deg, 3%, 87%);
+}
+html body main.container form input:focus {
+  border: 1px solid transparent;
+  border-image: linear-gradient(0deg, hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%)) !important;
+  border-image-slice: 1;
 }
 @media only screen and (min-width: 1024px) {
   html body {
@@ -167,11 +175,16 @@ html body main.container input {
     top: 25%;
     left: 40%;
   }
+  html body header .card_container .card_front .number_set,
+html body header .card_container .card_front .month_set,
+html body header .card_container .card_front .year_set {
+    font-size: 1rem !important;
+  }
   html body header .card_container .card_back {
     width: 447px;
     height: 245px;
     top: auto;
-    bottom: 25%;
+    bottom: 20%;
     left: 60%;
     z-index: 20;
   }
@@ -182,7 +195,11 @@ html body main.container input {
   html body main.container form.grid_items {
     position: absolute;
     right: 20%;
-    bottom: 150px;
-    left: 260px;
+    bottom: 34%;
+    left: 40%;
+    height: 340px;
+  }
+  html body main.container form.grid_items button {
+    margin: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
