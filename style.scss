@@ -79,21 +79,21 @@ html {
               letter-spacing: 2px;
             }
 
-            .month_set {
+            .name_set {
               font-size: 0.6rem;
               margin-left: 10%;
             }
-            .year_set {
+            .date_set {
               font-size: 0.6rem;
               margin-right: 10%;
             }
 
-            .date {
-              display: flex;
-              height: 100%;
-              justify-content: space-between;
-              align-content: flex-end;
-            }
+            // .date {
+            //   display: flex;
+            //   height: 100%;
+            //   justify-content: space-between;
+            //   align-content: flex-end;
+            // }
           }
         }
         .card_back {
@@ -222,10 +222,14 @@ html {
             height: 245px;
             top: 25%;
             left: 40%;
-            .number_set,
-            .month_set,
-            .year_set {
+            .number_set {
+              font-size: 1.6rem;
+              font-weight: 500;
+            }
+            .name_set,
+            .date_set {
               font-size: 1rem !important;
+              letter-spacing: 1.2px;
             }
           }
           .card_back {
@@ -235,6 +239,10 @@ html {
             bottom: 20%;
             left: 60%;
             z-index: 20;
+            p {
+              right: 55px;
+              font-size: 0.8rem;
+            }
           }
         }
       }
@@ -247,7 +255,7 @@ html {
           right: 20%;
           bottom: 34%;
           left: 40%;
-
+          top: 270px;
           height: 340px;
 
           button {

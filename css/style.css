@@ -53,19 +53,13 @@ html body header .card_container .card_front .card_value .number_set {
   width: 100%;
   letter-spacing: 2px;
 }
-html body header .card_container .card_front .card_value .month_set {
+html body header .card_container .card_front .card_value .name_set {
   font-size: 0.6rem;
   margin-left: 10%;
 }
-html body header .card_container .card_front .card_value .year_set {
+html body header .card_container .card_front .card_value .date_set {
   font-size: 0.6rem;
   margin-right: 10%;
-}
-html body header .card_container .card_front .card_value .date {
-  display: flex;
-  height: 100%;
-  justify-content: space-between;
-  align-content: flex-end;
 }
 html body header .card_container .card_back {
   background-image: url("../images/bg-card-back.png");
@@ -175,10 +169,14 @@ html body main.container form input:focus {
     top: 25%;
     left: 40%;
   }
-  html body header .card_container .card_front .number_set,
-html body header .card_container .card_front .month_set,
-html body header .card_container .card_front .year_set {
+  html body header .card_container .card_front .number_set {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  html body header .card_container .card_front .name_set,
+html body header .card_container .card_front .date_set {
     font-size: 1rem !important;
+    letter-spacing: 1.2px;
   }
   html body header .card_container .card_back {
     width: 447px;
@@ -187,6 +185,10 @@ html body header .card_container .card_front .year_set {
     bottom: 20%;
     left: 60%;
     z-index: 20;
+  }
+  html body header .card_container .card_back p {
+    right: 55px;
+    font-size: 0.8rem;
   }
   html body main.container {
     position: relative;
@@ -197,6 +199,7 @@ html body header .card_container .card_front .year_set {
     right: 20%;
     bottom: 34%;
     left: 40%;
+    top: 270px;
     height: 340px;
   }
   html body main.container form.grid_items button {
