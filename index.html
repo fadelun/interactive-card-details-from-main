@@ -44,18 +44,20 @@
             <p class="number_set">0000 0000 0000 0000</p>
 
             <p class="name_set">Jane Appleseed</p>
-            <p class="date_set">00/00</p>
+            <p class="date_set">
+              <span class="month">00</span>/<span class="year">00</span>
+            </p>
           </div>
         </div>
         <div class="card_back">
-          <p>000</p>
+          <p class="code_set">000</p>
         </div>
       </div>
     </header>
 
     <!-- form -->
     <main class="container">
-      <form class="grid_items">
+      <form class="grid_items" style="display: none">
         <div class="item1">
           <label for="username">Cardholder Name</label>
           <input
@@ -63,30 +65,103 @@
             id="username"
             name="username"
             placeholder="e.g. Jane Appleseed"
+            required
+            oninvalid="this.setCustomValidity('Username required')"
+            oninput="this.setCustomValidity('')"
           />
         </div>
         <div class="item2">
-          <label for="lname">Card Number</label>
+          <label for="number">Card Number</label>
+          <!-- pattern="[0-9]+" => submit akan berhasil jika input hanya mengandung number  -->
           <input
-            type="number"
+            type="text"
             id="number"
             name="number"
             placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="16"
+            pattern="[0-9]+"
+            required
+            oninvalid="this.setCustomValidity('Wrong format, number only')"
+            oninput="this.setCustomValidity('')"
           />
         </div>
         <div class="item3">
           <p>Exp. Date (MM/YY)</p>
           <div class="flex">
-            <input type="number" id="month" name="month" placeholder="MM" />
-            <input type="number" id="year" name="year" placeholder="YY" />
+            <input
+              type="number"
+              id="month"
+              name="month"
+              placeholder="MM"
+              maxlength="2"
+              max="12"
+              min="1"
+              required
+              oninvalid="this.setCustomValidity('can\'t be blank')"
+              oninput="this.setCustomValidity('')"
+            />
+            <input
+              type="number"
+              id="year"
+              name="year"
+              placeholder="YY"
+              maxlength="2"
+              max="99"
+              min="20"
+              required
+              oninvalid="this.setCustomValidity('can\'t be blank')"
+              oninput="this.setCustomValidity('')"
+            />
           </div>
         </div>
         <div class="item4">
-          <p>CVC</p>
-          <input type="number" id="day" name="day" placeholder="e.g. 123 " />
+          <label for="code">CVC</label>
+          <input
+            type="text"
+            id="code"
+            name="validation code"
+            placeholder="e.g. 123 "
+            maxlength="3"
+            required
+            oninvalid="this.setCustomValidity('can\'t be blank')"
+            oninput="this.setCustomValidity('')"
+          />
         </div>
         <button class="item5">Confirm</button>
       </form>
+
+      <!-- succes message -->
+      <div class="succes_message">
+        <div class="logo">
+          <svg
+            width="80"
+            height="80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="40" cy="40" r="40" fill="url(#a)" />
+            <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3" />
+            <defs>
+              <linearGradient
+                id="a"
+                x1="-23.014"
+                y1="11.507"
+                x2="0"
+                y2="91.507"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#6348FE" />
+                <stop offset="1" stop-color="#610595" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="message">
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+        </div>
+        <button class="btn_complete">Continue</button>
+      </div>
     </main>
 
     <!-- Completed state start -->
