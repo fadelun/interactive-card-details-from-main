@@ -153,6 +153,28 @@ html body main.container form input:focus {
   border-image: linear-gradient(0deg, hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%)) !important;
   border-image-slice: 1;
 }
+html body main.container .succes_message {
+  background: orange;
+  position: absolute;
+  right: 20%;
+  bottom: 34%;
+  left: 40%;
+  top: 270px;
+  height: 340px;
+  display: flex;
+  flex-wrap: wrap;
+}
+html body main.container .succes_message .logo,
+html body main.container .succes_message .message,
+html body main.container .succes_message button {
+  width: 100%;
+  text-align: center;
+}
+html body main.container .succes_message .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media only screen and (min-width: 1024px) {
   html body {
     display: flex;
