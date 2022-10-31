@@ -4,17 +4,22 @@ const frontMonth = document.querySelector(".date_set .month");
 const frontYear = document.querySelector(".date_set .year");
 const frontCode = document.querySelector(".code_set");
 
-const inputName = document.querySelector("input#username")
-const inputNumber = document.querySelector("input#number")
-const inputMonth = document.querySelector("input#month")
-const inputYear = document.querySelector("input#year")
-const inputCode = document.querySelector("input#code")
-const button = document.querySelector("button")
+const inputName = document.querySelector("input#username");
+const inputNumber = document.querySelector("input#number");
+const inputMonth = document.querySelector("input#month");
+const inputYear = document.querySelector("input#year");
+const inputCode = document.querySelector("input#code");
+const button = document.querySelector("button");
+
+const form = document.querySelector("form")
+const message = document.querySelector(".succes_message")
+
+
 
 // contoh
 
-inputNumber.value = "1234556677889900";
-inputName.value = "Muhammad Fadll"
+// inputNumber.value = "1234556677889900";
+// inputName.value = "Muhammad Fadll"
 
 
 function createNumber(event) {
@@ -43,7 +48,8 @@ function createCode() {
 
 function handleSubmit(e) {
     e.preventDefault()
-    alert("succes")
+    form.style.display = "none";
+    message.style.display = "flex";
 }
 
 
