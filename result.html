@@ -57,81 +57,8 @@
 
     <!-- form -->
     <main class="container">
-      <form class="grid_items" action="result.html" method="GET">
-        <div class="item1">
-          <label for="username">Cardholder Name</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="e.g. Jane Appleseed"
-            required
-            oninvalid="this.setCustomValidity('Username required')"
-            oninput="this.setCustomValidity('')"
-          />
-        </div>
-        <div class="item2">
-          <label for="number">Card Number</label>
-          <!-- pattern="[0-9]+" => submit akan berhasil jika input hanya mengandung number  -->
-          <input
-            type="text"
-            id="number"
-            name="number"
-            placeholder="e.g. 1234 5678 9123 0000"
-            maxlength="16"
-            pattern="[0-9]+"
-            required
-            oninvalid="this.setCustomValidity('Wrong format, number only')"
-            oninput="this.setCustomValidity('')"
-          />
-        </div>
-        <div class="item3">
-          <p>Exp. Date (MM/YY)</p>
-          <div class="flex">
-            <input
-              type="number"
-              id="month"
-              name="month"
-              placeholder="MM"
-              maxlength="2"
-              max="12"
-              min="1"
-              required
-              oninvalid="this.setCustomValidity('can\'t be blank')"
-              oninput="this.setCustomValidity('')"
-            />
-            <input
-              type="number"
-              id="year"
-              name="year"
-              placeholder="YY"
-              maxlength="2"
-              max="99"
-              min="20"
-              required
-              oninvalid="this.setCustomValidity('can\'t be blank')"
-              oninput="this.setCustomValidity('')"
-            />
-          </div>
-        </div>
-        <div class="item4">
-          <label for="code">CVC</label>
-          <input
-            type="text"
-            id="code"
-            name="validation code"
-            placeholder="e.g. 123 "
-            maxlength="3"
-            required
-            oninvalid="this.setCustomValidity('can\'t be blank')"
-            oninput="this.setCustomValidity('')"
-          />
-        </div>
-        <button class="item5">Confirm</button>
-      </form>
-
       <!-- succes message -->
-      <!-- <div class="succes_message" style="display: none">
+      <div class="succes_message">
         <div class="logo">
           <svg
             width="80"
@@ -160,8 +87,9 @@
           <h1>Thank you!</h1>
           <p>We've added your card details</p>
         </div>
-        <button class="btn_complete">Continue</button>
-      </div> -->
+        <!-- <button class="btn_complete">Continue</button> -->
+        <a href="/" class="btn_complete">Continue</a>
+      </div>
     </main>
 
     <!-- Completed state start -->
@@ -174,6 +102,36 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
-    <script src="./js/script.js"></script>
+    <!-- <script src="./js/script.js"></script> -->
+    <script>
+      const frontNumber = document.querySelector(".number_set");
+      const frontName = document.querySelector(".name_set");
+      const frontMonth = document.querySelector(".date_set .month");
+      const frontYear = document.querySelector(".date_set .year");
+      const frontCode = document.querySelector(".code_set");
+
+      //   const allResult = [
+      //     frontName,
+      //     frontNumber,
+      //     frontMonth,
+      //     frontYear,
+      //     frontCode,
+      //   ];
+
+      new URLSearchParams(window.location.search).forEach((value, name) => {
+        console.log(value);
+
+        name == "username"
+          ? (frontName.innerHTML = value)
+          : name == "number"
+          ? (frontNumber.innerHTML = value)
+          : "";
+      });
+
+      //   console.log(new URLSearchParams(window.location.search));
+      //   // allResult.forEach(result => {
+
+      //   // })
+    </script>
   </body>
 </html>

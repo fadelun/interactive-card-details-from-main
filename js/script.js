@@ -46,11 +46,37 @@ function createCode() {
     frontCode.innerHTML = value
 }
 
-function handleSubmit(e) {
-    e.preventDefault()
-    form.style.display = "none";
-    message.style.display = "flex";
-}
+// function handleSubmit(e) {
+//     let emptyValue = ''
+//     switch (emptyValue) {
+//         case inputName.value:
+//         case inputNumber.value:
+//         case inputMonth.value:
+//         case inputYear.value:
+//         case inputCode.value:
+//             console.log(false)
+//             break;
+//         default:
+//             console.log(true)
+//             e.preventDefault()
+//             message.style.display = "flex";
+
+
+
+//             ;
+//     }
+
+//     // e.preventDefault()
+
+
+//     // console.log(inputNumber.value !== '')
+//     // console.log(inputName.value)
+//     // console.log(inputMonth.value)
+//     // console.log(inputYear.value)
+//     // console.log(inputCode.value)
+//     // form.style.display = "none";
+//     // message.style.display = "flex";
+// }
 
 
 
@@ -68,8 +94,8 @@ function handleInputNumber(value) {
 
     frontNumber.innerHTML = arrayNumber
 
-    console.log(arrayNumber)
-    // checkNumberInput(arrayNumber)
+    // console.log(arrayNumber)
+
 
 
 }

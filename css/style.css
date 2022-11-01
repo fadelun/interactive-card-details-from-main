@@ -162,7 +162,7 @@ html body main.container .succes_message {
 }
 html body main.container .succes_message .logo,
 html body main.container .succes_message .message,
-html body main.container .succes_message button {
+html body main.container .succes_message .btn_complete {
   width: 100%;
   text-align: center;
 }
@@ -183,6 +183,10 @@ html body main.container .succes_message .btn_complete {
   font-size: 1rem;
   letter-spacing: 1px;
   font-family: "Space Grotesk", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 @media only screen and (min-width: 1024px) {
   html body {

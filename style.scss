@@ -217,7 +217,7 @@ html {
 
         .logo,
         .message,
-        button {
+        .btn_complete {
           width: 100%;
           text-align: center;
         }
@@ -238,6 +238,10 @@ html {
           font-size: 1rem;
           letter-spacing: 1px;
           font-family: $font-primary;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
         }
       }
     }
