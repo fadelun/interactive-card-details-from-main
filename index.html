@@ -57,7 +57,7 @@
 
     <!-- form -->
     <main class="container">
-      <form class="grid_items" action="result.html" method="GET">
+      <form class="grid_items" action="" method="dialog">
         <div class="item1">
           <label for="username">Cardholder Name</label>
           <input
@@ -66,10 +66,10 @@
             name="username"
             placeholder="e.g. Jane Appleseed"
             required
-            oninvalid="this.setCustomValidity('Username required')"
-            oninput="this.setCustomValidity('')"
           />
+          <p class="text_alert">Username required</p>
         </div>
+
         <div class="item2">
           <label for="number">Card Number</label>
           <!-- pattern="[0-9]+" => submit akan berhasil jika input hanya mengandung number  -->
@@ -81,12 +81,12 @@
             maxlength="16"
             pattern="[0-9]+"
             required
-            oninvalid="this.setCustomValidity('Wrong format, number only')"
-            oninput="this.setCustomValidity('')"
           />
+          <p class="text_alert">Wrong format, number only</p>
         </div>
         <div class="item3">
-          <p>Exp. Date (MM/YY)</p>
+          <!-- <p class="label">Exp. Date (MM/YY)</p> -->
+          <label for="month">Exp. Date (MM/YY)</label>
           <div class="flex">
             <input
               type="number"
@@ -97,8 +97,6 @@
               max="12"
               min="1"
               required
-              oninvalid="this.setCustomValidity('can\'t be blank')"
-              oninput="this.setCustomValidity('')"
             />
             <input
               type="number"
@@ -109,9 +107,8 @@
               max="99"
               min="20"
               required
-              oninvalid="this.setCustomValidity('can\'t be blank')"
-              oninput="this.setCustomValidity('')"
             />
+            <p class="text_alert">can't be blank</p>
           </div>
         </div>
         <div class="item4">
@@ -123,15 +120,14 @@
             placeholder="e.g. 123 "
             maxlength="3"
             required
-            oninvalid="this.setCustomValidity('can\'t be blank')"
-            oninput="this.setCustomValidity('')"
           />
+          <p class="text_alert">can't be blank</p>
         </div>
         <button class="item5">Confirm</button>
       </form>
 
       <!-- succes message -->
-      <!-- <div class="succes_message" style="display: none">
+      <div class="succes_message" style="display: none">
         <div class="logo">
           <svg
             width="80"
@@ -161,7 +157,7 @@
           <p>We've added your card details</p>
         </div>
         <button class="btn_complete">Continue</button>
-      </div> -->
+      </div>
     </main>
 
     <!-- Completed state start -->

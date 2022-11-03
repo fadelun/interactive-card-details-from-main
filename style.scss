@@ -140,7 +140,7 @@ html {
           grid-template-rows: repeat(2, 25%) 30% 1fr;
           grid-column-gap: 0px;
           grid-row-gap: 0px;
-          height: 300px;
+          height: 370px;
 
           .item1 {
             grid-area: 1 / 1 / 2 / 5;
@@ -155,6 +155,7 @@ html {
             .flex {
               display: flex;
               justify-content: space-between;
+              flex-wrap: wrap;
 
               input {
                 width: 46%;
@@ -175,8 +176,7 @@ html {
             }
           }
         }
-        label,
-        p {
+        label {
           @include label-text();
 
           color: hsl(278deg 100% 11%);
@@ -190,7 +190,7 @@ html {
           width: 100%;
           border-radius: 6px;
           border: 1px solid $violet-light;
-          margin-bottom: 8px;
+
           font-size: 18px;
           &::placeholder {
             color: $violet-light;
@@ -206,6 +206,12 @@ html {
             ) !important;
             border-image-slice: 1;
           }
+        }
+
+        .text_alert {
+          font-size: 12px;
+          color: $input-error;
+          font-weight: bold;
         }
       }
       .succes_message {

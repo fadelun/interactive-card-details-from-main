@@ -91,7 +91,7 @@ html body main.container form.grid_items {
   grid-template-rows: repeat(2, 25%) 30% 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  height: 300px;
+  height: 370px;
 }
 html body main.container form.grid_items .item1 {
   grid-area: 1/1/2/5;
@@ -106,6 +106,7 @@ html body main.container form.grid_items .item3 {
 html body main.container form.grid_items .item3 .flex {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 html body main.container form.grid_items .item3 .flex input {
   width: 46%;
@@ -125,8 +126,7 @@ html body main.container form.grid_items button.item5 {
   font-family: "Space Grotesk", sans-serif;
   font-weight: 500;
 }
-html body main.container form label,
-html body main.container form p {
+html body main.container form label {
   font-weight: bold;
   text-transform: uppercase;
   display: block;
@@ -142,7 +142,6 @@ html body main.container form input {
   width: 100%;
   border-radius: 6px;
   border: 1px solid hsl(270deg, 3%, 87%);
-  margin-bottom: 8px;
   font-size: 18px;
 }
 html body main.container form input::placeholder {
@@ -152,6 +151,11 @@ html body main.container form input:focus {
   border: 1px solid transparent;
   border-image: linear-gradient(0deg, hsl(249deg, 99%, 64%), hsl(278deg, 94%, 30%)) !important;
   border-image-slice: 1;
+}
+html body main.container form .text_alert {
+  font-size: 12px;
+  color: hsl(0deg, 100%, 66%);
+  font-weight: bold;
 }
 html body main.container .succes_message {
   width: 100%;
