@@ -19,7 +19,6 @@ const message = document.querySelector(".succes_message");
 
 
 
-
 // contoh
 
 // inputNumber.value = "1234556677889900";
@@ -28,13 +27,14 @@ const message = document.querySelector(".succes_message");
 
 function createNumber(event) {
     let value = inputNumber.value;
-    console.log(event.target == inputNumber)
+    // console.log(event.target == inputNumber)
     handleInputNumber(value.split(''))
 }
 
 function createUsername() {
     let value = inputName.value;
     frontName.innerHTML = value
+    // return value !== ""
 }
 
 function createMonth() {
@@ -50,24 +50,43 @@ function createCode() {
     frontCode.innerHTML = value
 }
 
-function handleSubmit(e) {
+function handleSubmit() {
+
+    // const allInput = [inputName.value, inputNumber.value, inputMonth.value, inputYear.value, inputCode.value]
+    const allInput = [inputName, inputNumber, inputMonth, inputYear, inputCode]
+    const ID = [inputName.id, inputNumber.id, inputMonth.id, inputYear.id, inputCode.id]
+
+    // const checkInputs = allInput.filter(item => item != "")
+
+    for (let i = 0; i < allInput.length; i++) {
+        let item = allInput[i]
+        if (item.value == "") {
+            for (let j = i; j < ID.length; j++) {
+
+                if (item.id === ID[0]) {
+                    item.nextElementSibling.innerHTML = "Username required"
+                } else if (item.id === ID[1]) {
+                    item.nextElementSibling.innerHTML = "Wrong format, number only"
+                } else {
+                    item.nextElementSibling.innerHTML = "can't be blank"
+                }
+            }
+
+        } else {
+
+            item.nextElementSibling.innerHTML = ""
+        }
+    }
 
 
-    e.preventDefault()
-    message.style.display = "flex";
-    form.style.display = "none"
+
+    //     <p class="text_alert">Username required</p>
+    // <p class="text_alert">Wrong format, number only</p>
+    // <p class="text_alert">can't be blank</p>
+    // <p class="text_alert">can't be blank</p>
 
 
-    // e.preventDefault()
-
-
-    // console.log(inputNumber.value !== '')
-    // console.log(inputName.value)
-    // console.log(inputMonth.value)
-    // console.log(inputYear.value)
-    // console.log(inputCode.value)
-    // form.style.display = "none";
-    // message.style.display = "flex";
+    // console.log(checkInputs)
 }
 
 
