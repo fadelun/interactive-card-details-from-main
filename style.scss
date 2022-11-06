@@ -40,6 +40,7 @@ html {
   font-size: 18px;
   font-family: $font-primary;
   body {
+    width: 100vw;
     height: 100vh;
 
     header {
@@ -129,7 +130,7 @@ html {
       background: white;
       padding: 80px 6% 0;
       display: flex;
-      flex-wrap: wrap;
+      justify-content: center;
 
       form {
         &.grid_items {
@@ -165,6 +166,7 @@ html {
           }
           button {
             @include style-button();
+            margin: 10px;
 
             &.item5 {
               grid-area: 4 / 1 / 5 / 5;
@@ -262,7 +264,7 @@ html {
         width: 40%;
         background: url(../images/bg-main-desktop.png);
         background-size: cover;
-        height: 100vh;
+        height: 100%;
 
         .card_container {
           .card_front {

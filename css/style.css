@@ -10,6 +10,7 @@ html {
   font-family: "Space Grotesk", sans-serif;
 }
 html body {
+  width: 100vw;
   height: 100vh;
 }
 html body header {
@@ -83,7 +84,7 @@ html body main.container {
   background: white;
   padding: 80px 6% 0;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 html body main.container form.grid_items {
   display: grid;
@@ -119,6 +120,7 @@ html body main.container form.grid_items button {
   border: 1px solid transparent;
   color: white;
   border-radius: 8px;
+  margin: 10px;
 }
 html body main.container form.grid_items button.item5 {
   grid-area: 4/1/5/5;
@@ -204,7 +206,7 @@ html body main.container .succes_message .btn_complete {
     width: 40%;
     background: url(../images/bg-main-desktop.png);
     background-size: cover;
-    height: 100vh;
+    height: 100%;
   }
   html body header .card_container .card_front {
     width: 447px;
