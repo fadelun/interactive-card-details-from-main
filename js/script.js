@@ -12,7 +12,11 @@ const inputCode = document.querySelector("input#code");
 const button = document.querySelector("button");
 
 const form = document.querySelector("form")
-const message = document.querySelector(".succes_message")
+const message = document.querySelector(".succes_message");
+// const allInput = document.getElementsByName('input')
+
+
+
 
 
 
@@ -46,37 +50,25 @@ function createCode() {
     frontCode.innerHTML = value
 }
 
-// function handleSubmit(e) {
-//     let emptyValue = ''
-//     switch (emptyValue) {
-//         case inputName.value:
-//         case inputNumber.value:
-//         case inputMonth.value:
-//         case inputYear.value:
-//         case inputCode.value:
-//             console.log(false)
-//             break;
-//         default:
-//             console.log(true)
-//             e.preventDefault()
-//             message.style.display = "flex";
+function handleSubmit(e) {
 
 
-
-//             ;
-//     }
-
-//     // e.preventDefault()
+    e.preventDefault()
+    message.style.display = "flex";
+    form.style.display = "none"
 
 
-//     // console.log(inputNumber.value !== '')
-//     // console.log(inputName.value)
-//     // console.log(inputMonth.value)
-//     // console.log(inputYear.value)
-//     // console.log(inputCode.value)
-//     // form.style.display = "none";
-//     // message.style.display = "flex";
-// }
+    // e.preventDefault()
+
+
+    // console.log(inputNumber.value !== '')
+    // console.log(inputName.value)
+    // console.log(inputMonth.value)
+    // console.log(inputYear.value)
+    // console.log(inputCode.value)
+    // form.style.display = "none";
+    // message.style.display = "flex";
+}
 
 
 
@@ -125,6 +117,4 @@ button.addEventListener('click', handleSubmit)
 // inputNumber.oninvalid = function (event) {
 //     event.target.setCustomValidity('Username should only contain lowercase letters. e.g. john');
 // }
-
-
 

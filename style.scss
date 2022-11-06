@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
-$active-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+$active-border: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
 $input-error: hsl(0, 100%, 66%);
 $violet-light: hsl(270, 3%, 87%);
 $violet-dark: hsl(279, 6%, 55%);
@@ -69,8 +69,6 @@ html {
           z-index: 99;
 
           .logo {
-            // The flex-grow property specifies how much a flex item will grow relative to the rest of the flex items.
-            // flex-grow: 1;
             height: 40%;
             padding: 14px 20px;
           }
@@ -188,23 +186,22 @@ html {
 
           padding: 10px 16px;
           width: 100%;
-          border-radius: 6px;
+          border-radius: 8px;
           border: 1px solid $violet-light;
+          position: relative;
 
           font-size: 18px;
           &::placeholder {
             color: $violet-light;
           }
 
-          &:focus {
-            // cara bikin gradiasi warna border
+          &:focus-visible {
+            // cara bikin gradiasi warna pada border
+            background: linear-gradient(white, white) padding-box,
+              linear-gradient(to right, $active-border) border-box;
             border: 1px solid transparent;
-            border-image: linear-gradient(
-              0deg,
-              hsl(249, 99%, 64%),
-              hsl(278, 94%, 30%)
-            ) !important;
-            border-image-slice: 1;
+            // bingkai pada kotak input menngunakan outline bukan border
+            outline: transparent;
           }
         }
 
