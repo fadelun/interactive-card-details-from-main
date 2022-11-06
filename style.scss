@@ -203,6 +203,10 @@ html {
             // bingkai pada kotak input menngunakan outline bukan border
             outline: transparent;
           }
+
+          &.error {
+            border: 1px solid $input-error;
+          }
         }
 
         .text_alert {
@@ -302,7 +306,7 @@ html {
           bottom: 34%;
           left: 40%;
           top: 270px;
-          height: 340px;
+          height: 380px;
 
           button {
             margin: 10px;
