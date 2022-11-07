@@ -8,17 +8,17 @@
       Live
     </a>
     <span> | </span>
-    <a href="https://www.frontendmentor.io/solutions/react-js-with-tailwind-Byw9ouDB5">
+    <a href="https://www.frontendmentor.io/solutions/style-border-color-and-message-error-vZ0KKhEFdG">
       Solution
     </a>
    <span> | </span>
-    <a href="https://www.frontendmentor.io/challenges">
+    <a href="https://www.frontendmentor.io/challenges/">
       Challenge
     </a>
   </h3>
 </div>
 <br>
-<div align="center" >Challenge by <a href="https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw/hub/react-js-with-tailwind-Byw9ouDB5" target="_blank" >Frontend Mentor</a>. Coded by <a href="https://github.com/fadelun" >Muhammad Fadll</a>.</div>
+<div align="center" >Challenge by <a href="https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw" target="_blank" >Frontend Mentor</a>. Coded by <a href="https://github.com/fadelun" >Muhammad Fadll</a>.</div>
 
 <br>
 <br>
