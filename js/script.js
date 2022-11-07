@@ -13,6 +13,7 @@ const button = document.querySelector("button");
 
 const form = document.querySelector("form")
 const message = document.querySelector(".succes_message");
+const btnComplete = document.querySelector(".btn_complete")
 
 
 
@@ -41,9 +42,12 @@ function createCode() {
     frontCode.innerHTML = value
 }
 
-function handleSubmit() {
+function handleSubmit(event) {
     const allInput = [inputName, inputNumber, inputMonth, inputYear, inputCode]
-    const ID = [inputName.id, inputNumber.id, inputMonth.id, inputYear.id, inputCode.id]
+    const ID = [inputName.id, inputNumber.id, inputMonth.id, inputYear.id, inputCode.id];
+
+    // kumpulan semua nilai input
+    const wrap = []
 
     for (let i = 0; i < allInput.length; i++) {
         let item = allInput[i]
@@ -70,8 +74,27 @@ function handleSubmit() {
         else {
             item.classList.remove('error')
             item.nextElementSibling.innerHTML = ""
+
+
+            wrap.push(item.value)
+
         }
+
+
     }
+
+    if (wrap.length == 5) {
+        event.preventDefault()
+        form.style.display = "none";
+        message.style.display = "flex"
+    }
+
+
+}
+
+function handleBtnComplete() {
+    window.location.reload();
+
 }
 
 
@@ -102,6 +125,8 @@ inputMonth.addEventListener('change', createMonth)
 inputYear.addEventListener('change', createYear)
 inputCode.addEventListener('change', createCode)
 button.addEventListener('click', handleSubmit)
+btnComplete.addEventListener('click', handleBtnComplete)
+
 
 
 
