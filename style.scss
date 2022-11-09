@@ -158,6 +158,19 @@ html {
 
               input {
                 width: 46%;
+
+                // menghilangkan tanda panah pada input
+                /* Chrome, Safari, Edge, Opera */
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                  -webkit-appearance: none;
+                  margin: 0;
+                }
+
+                /* Firefox */
+                &[type="number"] {
+                  -moz-appearance: textfield;
+                }
               }
             }
           }
@@ -268,12 +281,12 @@ html {
 
         .card_container {
           .card_front {
-            // width: auto;
-            // height: ;
             width: 447px;
             height: 245px;
             top: 25%;
             left: 40%;
+            border-radius: 10px;
+            box-shadow: 10px 20px 30px 0px #00000026;
             .number_set {
               font-size: 1.6rem;
               font-weight: 500;
@@ -291,6 +304,8 @@ html {
             bottom: 20%;
             left: 60%;
             z-index: 20;
+            border-radius: 10px;
+            box-shadow: 10px 20px 30px 0px #00000026;
             p {
               right: 55px;
               font-size: 0.8rem;
